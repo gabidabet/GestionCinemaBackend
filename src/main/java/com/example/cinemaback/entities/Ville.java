@@ -18,7 +18,7 @@ public class Ville {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    private Long x, y, z;
+    private Double longitude, latitude, altitude;
     @OneToMany(mappedBy = "ville")
     private Collection<Cinema> cinemas;
 }

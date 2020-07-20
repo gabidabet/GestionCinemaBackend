@@ -16,12 +16,24 @@ public class Cinema {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    private Long x, y, z;
+    private Double longitude, latitude, altitude;
     @ManyToOne
     @JoinColumn
     private Ville ville;
     @OneToMany(mappedBy = "cinema")
     private Collection<Salle> salles;
+	public Cinema(String nom, Double longitude, Double latitude, Double altitude, Ville ville,
+			Collection<Salle> salles) {
+		super();
+		this.nom = nom;
+		this.longitude = longitude;
+		this.latitude = latitude;
+		this.altitude = altitude;
+		this.ville = ville;
+		this.salles = salles;
+	}
+    
+    
 }
 
 

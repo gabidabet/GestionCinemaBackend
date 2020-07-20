@@ -19,5 +19,10 @@ public class Categorie {
     private String nom;
     @OneToMany(mappedBy = "categorie")
     private Collection<Film> films;
+	public Categorie(String nom) {
+		super();
+		this.nom = nom;
+	}
 
+    
 }

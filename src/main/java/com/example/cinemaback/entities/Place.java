@@ -17,10 +17,17 @@ public class Place {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private int numero;
+    
+    public Place(int numero) {
+    	this.numero = numero;
+    }
     @ManyToOne
     @JoinColumn
     private Salle salle;
     @OneToMany(mappedBy = "place")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Ticket> tickets;
+   
+    
 }

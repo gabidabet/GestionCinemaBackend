@@ -20,7 +20,7 @@ public class Projection {
     private Long id;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
-    private int prix = 30;
+    private int prix;
     @ManyToOne
     @JoinColumn
     private Salle salle;

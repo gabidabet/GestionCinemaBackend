@@ -18,6 +18,7 @@ public class Salle {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
+    private Double longitude, latitude, altitude;
     private int nombrePlaces;
     @ManyToOne
     @JoinColumn
